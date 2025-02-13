@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fa" dir="ltr">
+<html lang="fa" dir="rtl">
 
 <head>
 
@@ -35,7 +35,7 @@
 
 </head>
 
-<body class="app sidebar-mini ltr light-mode">
+<body class="app sidebar-mini rtl light-mode">
 
     <!-- GLOBAL-LOADER -->
     <div id="global-loader">
@@ -85,10 +85,9 @@
                                             </div>
                                         </div>
                                         <div class="d-flex country">
-                                            <a class="nav-link icon text-center" data-bs-target="#country-selector"
-                                                data-bs-toggle="modal">
-                                                <i class="fa fa-user-secret"></i><span
-                                                    class="fs-16 ms-2 d-none d-xl-block">{{ Auth::user()->name }}</span>
+                                            <a class="nav-link icon text-center" data-bs-target="#country-selector" data-bs-toggle="modal">
+                                                <span class="fs-16 ms-2 d-none d-xl-block">{{ Auth::user()->name }}</span>
+                                                <i class="fa fa-user-secret"></i>
                                             </a>
                                         </div>
                                         <!-- COUNTRY -->
@@ -132,7 +131,7 @@
                                 fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
                                 <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
                             </svg></div>
-                        <ul class="side-menu">
+                        <ul class="font-vazir side-menu">
                             <li class="slide">
                                 <a class="side-menu__item has-link {{ request()->is('admin/product/*') ? 'active' : '' }}" data-bs-toggle="slide" href="{{ route('product-list') }}">
 								<i class="side-menu__icon fe fe-shopping-cart"></i>
@@ -142,6 +141,21 @@
                                 <a class="side-menu__item has-link {{ request()->is('admin/category/*') ? 'active' : '' }}" data-bs-toggle="slide" href="{{ route('category-list') }}">
 								<i class="side-menu__icon ti-package"></i>
 								<span class="side-menu__label">دسته بندی</span></a>
+                            </li>
+                            <li class="slide">
+                                <a class="side-menu__item has-link {{ request()->is('admin/users/*') ? 'active' : '' }}" data-bs-toggle="slide" href="{{ route('users-list') }}">
+								<i class="side-menu__icon fe fe-users"></i>
+								<span class="side-menu__label">کاربران</span></a>
+                            </li>
+                            <li class="slide">
+                                <a class="side-menu__item has-link {{ request()->is('admin/invoice/*') ? 'active' : '' }}" data-bs-toggle="slide" href="{{ route('invoice-list') }}">
+								<i class="side-menu__icon ion-clipboard"></i>
+								<span class="side-menu__label">سفارشات</span></a>
+                            </li>
+                            <li class="slide">
+                                <a class="side-menu__item has-link {{ request()->is('admin/role/*') ? 'active' : '' }}" data-bs-toggle="slide" href="{{ route('role-list') }}">
+								<i class="side-menu__icon fe fe-shield"></i>
+								<span class="side-menu__label">نقش ها</span></a>
                             </li>
                         </ul>
 
@@ -163,7 +177,7 @@
                         <!-- PAGE-HEADER -->
 						@yield('content')
                         <!-- PAGE-HEADER END -->
-                    
+
                     <!-- CONTAINER END -->
                 </div>
             </div>
@@ -176,34 +190,49 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content country-select-modal">
                     <div class="modal-header">
-                        <h6 class="modal-title">انتخاب کنید</h6><button aria-label="Close" class="btn-close"
+                        <h6 style="color: black" class="font-yekan modal-title">انتخاب کنید</h6><button aria-label="Close" class="btn-close"
                             data-bs-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="font-yekan modal-body">
                         <ul class="row p-3">
                             <li class="col-lg-6 mb-2">
-                                <a href="{{ route('home') }}" class="btn btn-country btn-lg btn-block">
-                                    <span class="country-selector bi bi-shop"></span><span style="margin-left: 11px">برو به فروشگاه</span>
+                                <a style="color: black" href="{{ route('home') }}" class="btn btn-country btn-lg btn-block">
+                                    <span class="country-selector bi bi-shop"></span><span style="margin-right: 3px">برو به فروشگاه</span>
                                 </a>
                             </li>
                             <li class="col-lg-6 mb-2">
-                                <a href="{{ route('admin') }}" class="btn btn-country btn-lg btn-block">
-                                    <span class="country-selector icon-home"></span><span style="margin-left: 11px">خانه اصلی</span>
+                                <a style="color: black" href="{{ route('admin') }}" class="btn btn-country btn-lg btn-block">
+                                    <span class="country-selector icon-home"></span><span style="margin-right: 3px">خانه اصلی</span>
                                 </a>
                             </li>
                             <li class="col-lg-6 mb-2">
-                                <a href="{{ route('product-list') }}" class="btn btn-country btn-lg btn-block">
-                                    <span class="country-selector fe fe-shopping-cart"></span><span style="margin-left: 11px">محصولات</span>
+                                <a style="color: black" href="{{ route('product-list') }}" class="btn btn-country btn-lg btn-block">
+                                    <span class="country-selector fe fe-shopping-cart"></span><span style="margin-right: 3px">محصولات</span>
                                 </a>
                             </li>
                             <li class="col-lg-6 mb-2">
-                                <a href="{{ route('category-list') }}" class="btn btn-country btn-lg btn-block">
-                                    <span class="country-selector ti-package"></span><span style="margin-left: 11px">دسته بندی</span>
+                                <a style="color: black" href="{{ route('category-list') }}" class="btn btn-country btn-lg btn-block">
+                                    <span class="country-selector ti-package"></span><span style="margin-right: 3px">دسته بندی</span>
                                 </a>
                             </li>
                             <li class="col-lg-6 mb-2">
-                                <a href="{{ route('logout') }}" class="btn btn-country btn-lg btn-block">
-                                    <span class="country-selector fe fe-log-out"></span><span style="margin-left: 11px">خروج از حساب</span>
+                                <a style="color: black" href="{{ route('users-list') }}" class="btn btn-country btn-lg btn-block">
+                                    <span class="country-selector fe fe-users"></span><span style="margin-right: 3px">کاربران</span>
+                                </a>
+                            </li>
+                            <li class="col-lg-6 mb-2">
+                                <a style="color: black" href="{{ route('invoice-list') }}" class="btn btn-country btn-lg btn-block">
+                                    <span class="country-selector ion-clipboard"></span><span style="margin-right: 3px">سفارشات</span>
+                                </a>
+                            </li>
+                            <li class="col-lg-6 mb-2">
+                                <a style="color: black" href="{{ route('role-list') }}" class="btn btn-country btn-lg btn-block">
+                                    <span class="country-selector fe fe-shield"></span><span style="margin-right: 3px">نقش ها</span>
+                                </a>
+                            </li>
+                            <li class="col-lg-6 mb-2">
+                                <a style="color: black" href="{{ route('logout') }}" class="btn btn-country btn-lg btn-block">
+                                    <span class="country-selector fe fe-log-out"></span><span style="margin-right: 3px">خروج از حساب</span>
                                 </a>
                             </li>
                         </ul>
@@ -217,7 +246,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="row align-items-center flex-row-reverse">
-                    <div class="col-md-12 col-sm-12 text-center">
+                    <div class="font-parastoo col-md-12 col-sm-12 text-center">
                         © <span></span> 1403 <a href="#">Sash</a>. طراحی شده توسط <span
                             class="fa fa-heart text-danger"></span>  <a href="#"> نیما عزتی </a>کلیه حقوق محفوظ است
                     </div>
@@ -307,7 +336,7 @@
 
     <!-- INPUT MASK JS-->
     <script src="{{ asset('panel/assets/plugins/input-mask/jquery.mask.min.js') }}"></script>
-    
+
     <!-- INTERNAL WYSIWYG Editor JS -->
     <script src="{{ asset('panel/assets/plugins/wysiwyag/jquery.richtext.js') }}"></script>
     <script src="{{ asset('panel/assets/plugins/wysiwyag/wysiwyag.js') }}"></script>
@@ -318,6 +347,10 @@
     <script src="{{ asset('panel/assets/plugins/fancyuploder/jquery.iframe-transport.js') }}"></script>
     <script src="{{ asset('panel/assets/plugins/fancyuploder/jquery.fancy-fileupload.js') }}"></script>
     <script src="{{ asset('panel/assets/plugins/fancyuploder/fancy-uploader.js') }}"></script>
+
+
+    <!-- SHOW PASSWORD JS -->
+    <script src="{{ asset('panel/assets/js/show-password.min.js') }}"></script>
 
 </body>
 

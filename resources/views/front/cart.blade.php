@@ -6,9 +6,9 @@
     
         <div class="minicart-header">
             <button class="close-cart border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="icon anm anm-times-r" data-bs-toggle="tooltip" data-bs-placement="left" title="خروج"></i></button>
-            <h4 class="fs-6">سبد شما</h4>
+            <h4 class="font-samim fs-6">سبد شما</h4>
         </div>
-        <div class="minicart-content">
+        <div class="font-parastoo minicart-content">
             <ul class="m-0 clearfix">
                 @if (is_array($baskets) || is_object($baskets))
                 @foreach ($baskets as $basket)
@@ -39,11 +39,11 @@
         </div>
         <div class="minicart-bottom">
             <div class="subtotal clearfix my-3">
-                <div class="totalInfo clearfix"><span>کل:</span><span class="item product-price">{{ $total }}</span></div>
+                <div class="font-parastoo totalInfo clearfix"><span>کل:</span><span class="item product-price">{{ $total }}</span></div>
             </div>
             <div class="minicart-action d-flex mt-3">
-                <a href="{{ route('basket-checkout' , ['user_id' => Auth::user()->id ]) }}" class="proceed-to-checkout btn btn-primary w-50 me-1">پرداخت</a>
-                <a href="{{ route('cart-basket') }}" class="cart-btn btn btn-secondary w-50 ms-1">نمایش سبد</a>
+                <a href="{{ route('basket-checkout' , ['user_id' => Auth::user()->id ]) }}" class="font-parastoo proceed-to-checkout btn btn-primary w-50 me-1">پرداخت</a>
+                <a href="{{ route('cart-basket') }}" class="font-parastoo cart-btn btn btn-secondary w-50 ms-1">نمایش سبد</a>
             </div>
         </div>
         @endif

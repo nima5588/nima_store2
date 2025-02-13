@@ -3,13 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\HasRole;
+use App\Models\ModelHasRole;
 use App\Models\Product;
+use App\Models\ProductBasket;
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
     public function admin()
     {
+
+//        Role::create(['name' => 'admin-category' , 'guard_name' => 'web']);
+
         return view('admin.panel');
     }
 
@@ -65,7 +75,7 @@ class AdminController extends Controller
     public function productUpdate(Request $request)
     {
         $product = Product::findOrfail($request->input('id'));
-        
+
         if ($product->name != $request->input('name')) {
             $request->validate([
                 'name' => 'required|max:30|unique:products,name'
@@ -194,4 +204,126 @@ class AdminController extends Controller
 
         return redirect(route('category-list'));
     }
+
+    public function users()
+    {
+        $users = User::all();
+
+        return view('admin.users-list', ['users' => $users]);
+    }
+
+    public function userEdit($id)
+    {
+        $user = User::findOrfail($id);
+        return view('admin.users-edit' , ['user' => $user]);
+    }
+
+    public function userUpdate(Request $request)
+    {
+        $user = User::findOrfail($request->input('id'));
+
+        if ($user->email != $request->input('email')) {
+            $request->validate([
+                'email' => 'required|string|email|max:255|unique:users',
+            ]);
+        }
+
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'phone' => 'required|string|min:11|max:11',
+        ]);
+
+        $user
+        ->update([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+        ]);
+
+        return redirect(route('users-list'));
+    }
+
+    public function userDelete($id)
+    {
+        $user = User::find($id);
+        $user->syncRoles([]);
+
+        User::findOrfail($id)->delete();
+
+        return redirect(route('users-list'));
+    }
+
+    public function userRegister()
+    {
+        return view('admin.users-register');
+    }
+
+    public function userInsert(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+            'phone' => 'required|string|min:11|max:11',
+        ]);
+
+        User::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+            'password' => Hash::make($request->input('password')),
+        ]);
+
+        return redirect(route('users-list'));
+    }
+
+    public function invoiceList()
+    {
+        $productbaskets = ProductBasket::all();
+
+        return view('admin.invoice-list' , ['productbaskets' => $productbaskets]);
+    }
+
+    public function invoiceDelete($id)
+    {
+        ProductBasket::findOrfail($id)->delete();
+
+        return redirect(route('invoice-list'));
+    }
+
+    public function roleList()
+    {
+        $hasroles = ModelHasRole::all();
+
+        return view('admin.role-list',['hasroles' => $hasroles]);
+    }
+
+    public  function  roleCreate()
+    {
+        $users = User::all();
+        $roles = Role::all();
+
+        return view('admin.role-create' , ['users' => $users , 'roles' => $roles]);
+    }
+
+    public function roleInsert(Request $request)
+    {
+        $userId = $request->input('id');
+        $role = $request->input('role');
+
+        $user = User::find($userId);
+        $user->assignRole($role);
+
+        return redirect(route('role-list'));
+    }
+
+    public function roleDelete($id , $role)
+    {
+        $user = User::find($id);
+
+        $user->removeRole($role);
+
+        return redirect(route('role-list'));
+    }
+
 }

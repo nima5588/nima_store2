@@ -4,7 +4,7 @@
 
 <form action="{{ route('product-search') }}" method="GET">
     <div class="main-header-center ms-3 d-none d-lg-block">
-        <input type="text" name="q" class="form-control" placeholder="...جستجو برای نتایج">
+        <input type="text" name="q" class="font-samim form-control" placeholder="...جستجو برای نتایج">
         <button class="btn px-0 pt-2"><i class="fe fe-search" aria-hidden="true"></i></button>
     </div>
 </form>
@@ -13,7 +13,7 @@
 
 @section('content')
 <!-- CONTAINER -->
-<div class="main-container container-fluid">
+<div class="font-samim main-container container-fluid">
 
     <!-- PAGE-HEADER -->
     <div class="page-header">

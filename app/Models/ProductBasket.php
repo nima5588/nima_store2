@@ -12,4 +12,9 @@ class ProductBasket extends Model
     {
         return $this->belongsTo(Product::class)->first();
     }
+
+    public function user()
+    {
+        return $this->belongsTo(user::class)->first();
+    }
 }

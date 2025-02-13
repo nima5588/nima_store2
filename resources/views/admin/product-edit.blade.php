@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="main-container container-fluid">
+<div class="font-samim main-container container-fluid">
 
     <!-- PAGE-HEADER -->
     <div class="page-header">

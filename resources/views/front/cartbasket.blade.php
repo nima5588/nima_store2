@@ -7,9 +7,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-between align-items-center">
-                <div class="page-title"><h1>سبد خرید</h1></div>
+                <div class="page-title"><h1 class="font-vazir">سبد خرید</h1></div>
                 <!--Breadcrumbs-->
-                <div class="breadcrumbs"><a href="{{ route('home') }}" title="بازگشت به صفحه اصلی">خانه</a><span class="main-title"><i class="icon anm anm-angle-right-l"></i>سبد خرید</span></div>
+                <div class="font-vazir breadcrumbs"><a href="{{ route('home') }}" title="بازگشت به صفحه اصلی">خانه</a><span class="main-title"><i class="icon anm anm-angle-right-l"></i>سبد خرید</span></div>
                 <!--End Breadcrumbs-->
             </div>
         </div>
@@ -18,11 +18,11 @@
 <!--End Page Header-->
 
 <!--Main Content-->
-<div class="container">     
+<div class="container">
     <div class="row">
         <!--Cart Content-->
         <div class="col-12 col-sm-12 col-md-12 col-lg-8 main-col">
-            <div class="alert alert-success py-2 alert-dismissible fade show cart-alert" role="alert">
+            <div class="font-vazir alert alert-success py-2 alert-dismissible fade show cart-alert" role="alert">
                 <i class="align-middle icon anm anm-truck icon-large me-2"></i><strong class="text-uppercase">!تبریک میگویم</strong>!شما ارسال رایگان دارید
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -31,7 +31,7 @@
             <!--Cart Form-->
             {{-- <form action="#" method="post" class="cart-table table-bottom-brd"> --}}
             <div class="cart-table table-bottom-brd">
-                <table class="table align-middle">
+                <table class="font-parastoo table align-middle">
                     <thead class="cart-row cart-header small-hide position-relative">
                         <tr>
                             <th class="action">&nbsp;</th>
@@ -43,7 +43,7 @@
                     <tbody>
                         @foreach ($baskets as $basket)
                         <tr class="cart-row cart-flex position-relative">
-                            <td class="cart-delete text-center small-hide"><a href="#" class="cart-remove remove-icon position-static" data-bs-toggle="tooltip" data-bs-placement="top" title="حذف"><i class="icon anm anm-times-r"></i></a></td>
+                            <td class="cart-delete text-center small-hide"><a href="{{ route('basket-delete', ['id' => $basket->id]) }}" class="cart-remove remove-icon position-static" data-bs-toggle="tooltip" data-bs-placement="top" title="حذف"><i class="icon anm anm-times-r"></i></a></td>
                             <td class="cart-image cart-flex-item">
                                 <img class="cart-image rounded-0 blur-up lazyload" data-src="{{ asset('img/'.$basket->product()->image) }}" src="{{ asset('img/'.$basket->product()->image) }}" alt="Sunset Sleep Scarf Top" width="120" height="170" />
                             </td>
@@ -63,13 +63,13 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="3" class="text-start"><a href="{{ route('home') }}" class="btn btn-outline-secondary btn-sm cart-continue"><i class="icon anm anm-angle-left-r me-2 d-none"></i>میخواهم محصولات بیشتری اضافه کنم</a></td>
+                            <td colspan="3" class="text-start"><a href="{{ route('home') }}" class="font-parastoo btn btn-outline-secondary btn-sm cart-continue"><i class="icon anm anm-angle-left-r me-2 d-none"></i>میخواهم محصولات بیشتری اضافه کنم</a></td>
                             <td colspan="3" class="text-end">
-                                <a name="update" href="{{ route('cart-basket') }}" class="btn btn-secondary btn-sm cart-continue ms-2"><i class="icon anm anm-sync-ar me-2 d-none"></i>بروزرسانی سبد</a>
+                                <a href="{{ route('cart-basket') }}" class="font-parastoo btn btn-secondary btn-sm cart-continue ms-2"><i class="icon anm anm-sync-ar me-2 d-none"></i>بروزرسانی سبد</a>
                             </td>
                         </tr>
                     </tfoot>
-                </table> 
+                </table>
             </div>
             {{-- </form> --}}
             <!--End Cart Form-->
@@ -79,31 +79,31 @@
         <!--Cart Sidebar-->
         <div class="col-12 col-sm-12 col-md-12 col-lg-4 cart-footer">
             <div class="cart-info sidebar-sticky">
-                <div class="cart-order-detail cart-col">
+                <div class="font-shabnam cart-order-detail cart-col">
                     <div class="row g-0 border-bottom pb-2">
                         <span class="col-6 col-sm-6 cart-subtotal-title"><strong>تکمیل سبد خرید</strong></span>
                     </div>
                     <div class="row g-0 border-bottom py-2">
                         <span class="col-6 col-sm-6 cart-subtotal-title"><strong>بخوانید</strong></span>
-                        <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end"><a href="#" class="money">شرایط استفاده</a></span>
+                        <span class="font-shabnam1 col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end"><a href="#" class="money">شرایط استفاده</a></span>
                     </div>
                     <div class="row g-0 border-bottom py-2">
                         <span class="col-6 col-sm-6 cart-subtotal-title"><strong>حریم خصوصی</strong></span>
-                        <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end"><a href="#" class="money">سیاست حفظ حریم خصوصی</a></span>
+                        <span class="font-shabnam1 col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end"><a href="#" class="money">سیاست حفظ حریم خصوصی</a></span>
                     </div>
                     <div class="row g-0 pt-2">
                         <span class="col-6 col-sm-6 cart-subtotal-title fs-6"><strong>کل</strong></span>
-                        <span class="col-6 col-sm-6 cart-subtotal-title fs-5 cart-subtotal text-end text-primary"><b class="money">{{ $total }}</b></span>
+                        <span class="font-parastoo col-6 col-sm-6 cart-subtotal-title fs-5 cart-subtotal text-end text-primary"><b class="money">{{ $total }}</b></span>
                     </div>
 
                     <p></p>
-                    <div class="customCheckbox cart-tearm">
+                    <div class="font-shabnam1 customCheckbox cart-tearm">
                         <input type="checkbox" value="allen-vela" id="cart-tearm">
                         <label for="cart-tearm">من با شرایط و ضوابط موافقم</label>
                     </div>
-                    <a href="{{ route('basket-checkout' , ['user_id' => Auth::user()->id ]) }}" id="cartCheckout" class="btn btn-lg my-4 checkout w-100">پرداخت</a>
+                    <a href="{{ route('basket-checkout' , ['user_id' => Auth::user()->id ]) }}" id="cartCheckout" class="font-parastoo btn btn-lg my-4 checkout w-100">پرداخت</a>
                     <div class="paymnet-img text-center"><img src="{{ asset('assets/images/icons/safepayment.png') }}" alt="Payment" width="299" height="28" /></div>
-                </div>                               
+                </div>
             </div>
         </div>
         <!--End Cart Sidebar-->

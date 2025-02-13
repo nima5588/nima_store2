@@ -22,10 +22,10 @@
                         <div class="slideshow-content slideshow-overlay middle-right">
                             <div class="slideshow-content-in">
                                 <div class="wrap-caption animation style1">
-                                    <h2 class="ss-mega-title">{{ $slider->name }}</h2>
-                                    <p class="ss-sub-title xs-hide">{!! $slider->description !!}</p>
+                                    <h2 class="font-parastoo ss-mega-title">{{ $slider->name }}</h2>
+                                    <p class="font-tanha ss-sub-title xs-hide">{!! $slider->description !!}</p>
                                     <div class="ss-btnWrap d-flex-justify-start">
-                                        <a class="btn btn-primary" href="{{ route('product', ['id' => $slider->id]) }}">بیشتر کشف کنید</a>
+                                        <a class="font-parastoo btn btn-primary" href="{{ route('product', ['id' => $slider->id]) }}">بیشتر کشف کنید</a>
                                     </div>
                                 </div>
                             </div>
@@ -49,8 +49,8 @@
                         <i class="icon anm anm-phone-call-l"></i>
                     </div>
                     <div class="service-content">
-                        <h3 class="title mb-2">هر زمان با ما تماس بگیرید</h3>
-                        <span class="text-muted">شبانه روزی</span>
+                        <h3 class="font-samim title mb-2">هر زمان با ما تماس بگیرید</h3>
+                        <span class="font-sahel text-muted">شبانه روزی</span>
                     </div>
                 </div>
                 <div class="service-wrap col-item">
@@ -58,8 +58,8 @@
                         <i class="icon anm anm-truck-l"></i>
                     </div>
                     <div class="service-content">
-                        <h3 class="title mb-2">سرویس در هر فروشگاه</h3>
-                        <span class="text-muted">حمل و نقل رایگان با سفارشات بیش از 100 هزار تومن</span>
+                        <h3 class="font-samim title mb-2">سرویس در هر فروشگاه</h3>
+                        <span class="font-sahel text-muted">حمل و نقل رایگان با سفارشات بیش از 100 هزار تومن</span>
                     </div>
                 </div>
                 <div class="service-wrap col-item">
@@ -67,8 +67,8 @@
                         <i class="icon anm anm-credit-card-l"></i>
                     </div>
                     <div class="service-content">
-                        <h3 class="title mb-2">پرداخت ایمن</h3>
-                        <span class="text-muted">ما همه کارتهای اعتباری اصلی را می پذیریم</span>
+                        <h3 class="font-samim title mb-2">پرداخت ایمن</h3>
+                        <span class="font-sahel text-muted">ما همه کارتهای اعتباری اصلی را می پذیریم</span>
                     </div>
                 </div>
                 <div class="service-wrap col-item">
@@ -76,8 +76,8 @@
                         <i class="icon anm anm-redo-l"></i>
                     </div>
                     <div class="service-content">
-                        <h3 class="title mb-2">بازده رایگان</h3>
-                        <span class="text-muted">یک ماه ضمانت بازگشت رایگان</span>
+                        <h3 class="font-samim title mb-2">بازده رایگان</h3>
+                        <span class="font-sahel text-muted">یک ماه ضمانت بازگشت رایگان</span>
                     </div>
                 </div>
             </div>
@@ -89,8 +89,8 @@
     <section class="section collection-slider pb-0">
         <div class="container">
             <div class="section-header">
-                <p class="mb-2 mt-0">خرید بر اساس دسته بندی</p>
-                <h2>مجموعه های دسته بندی</h2>
+                <p class="font-tanha mb-2 mt-0">دسته بندی محصولات</p>
+                <h2 class="font-samim">مجموعه های دسته بندی</h2>
             </div>
 
             
@@ -100,8 +100,8 @@
                     <a href="{{ route('home', ['category' => $category->id]) }}" class="category-link clr-none">
                         <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload" data-src="{{ asset('img/'.$category->image) }}" src="{{ asset('img/'.$category->image) }}" alt="Men's Jakets" title="{{ $category->name }}" width="365" height="365" /></div>
                         <div class="details mt-3 text-center">
-                            <h4 class="category-title mb-0">{{ $category->name }}</h4>
-                            <p class="counts">{{ $category->products_count }} تعداد محصول</p>
+                            <h4 class="font-samim category-title mb-0">{{ $category->name }}</h4>
+                            <p class="font-tanha counts">{{ $category->products_count }} تعداد محصول</p>
                         </div>
                     </a>
                 </div>
@@ -117,21 +117,21 @@
     <section class="section product-slider tab-slider-product">
         <div class="container">
             <div class="section-header">
-                <h2>محصولات</h2>
-                <p>تنوع عظیمی از بهترین محصولات ما را مرور کنید</p>
+                <h2 class="font-samim">محصولات</h2>
+                <p class="font-tanha">تنوع عظیمی از بهترین محصولات ما را مرور کنید</p>
             </div>
 
             <div class="tabs-listing">
                 <ul class="nav nav-tabs style1 justify-content-center" id="productTabs" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link head-font active" id="bestsellers-tab" data-bs-toggle="tab" data-bs-target="#bestsellers" type="button" role="tab" aria-controls="bestsellers" aria-selected="true"><a href="{{ route('home') }}">همه</a></button>
+                        <button class="font-samim nav-link head-font active" id="bestsellers-tab" data-bs-toggle="tab" data-bs-target="#bestsellers" type="button" role="tab" aria-controls="bestsellers" aria-selected="true"><a href="{{ route('home') }}">همه</a></button>
                     </li>
                 </ul>
 
                 <div class="tab-content" id="productTabsContent">
                     <div class="tab-pane show active" id="bestsellers" role="tabpanel" aria-labelledby="bestsellers-tab">
                         <!--Product Grid-->
-                        <div class="grid-products grid-view-items">
+                        <div class="font-parastoo grid-products grid-view-items">
                             <div class="row col-row product-options row-cols-xl-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-3 row-cols-2">        
                                 @foreach ($products as $product)
 
@@ -144,7 +144,11 @@
                                             <!-- End Product Image -->
                                             <!--Product Button-->
                                             <div class="button-set style1">
-                                                <a href="{{ route('basket-add', ['product_id' => $product->id]) }}" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به سبد"><i class="icon anm anm-cart-l"></i><span class="text">اضفه کردن به سبد</span></a>
+                                                @if (Auth::user())
+                                                <a href="{{ route('basket-add', ['product_id' => $product->id]) }}" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به سبد"><i class="icon anm anm-cart-l"></i><span class="text">اضافه کردن به سبد</span></a>
+                                                @else
+                                                <a href="{{ route('login') }}" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="اضافه کردن به سبد"><i class="icon anm anm-cart-l"></i><span class="text">اضافه کردن به سبد</span></a>
+                                                @endif
                                             </div>
                                             <!--End Product Button-->
                                         </div>

@@ -1097,4 +1097,156 @@
 
 }
 
+/* fonts */
+@font-face {
+    font-family: 'vazir';
+    src: url('../../fonts/Vazir.eot');
+    src: url('../../fonts/vazir.eot?#iefix') format('vazir-opentype'),
+         url('../../fonts/Vazir.woff') format('woff'),
+         url('../../fonts/Vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'vazir1';
+    src: url('../../fonts/Vazir-Thin.eot');
+    src: url('../../fonts/vazir-Thin.eot?#iefix') format('vazir-opentype'),
+         url('../../fonts/Vazir-Thin.woff') format('woff'),
+         url('../../fonts/Vazir-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'vazir2';
+    src: url('../../fonts/Vazir-Bold.eot');
+    src: url('../../fonts/vazir-Bold.eot?#iefix') format('vazir-opentype'),
+         url('../../fonts/Vazir-Bold.woff') format('woff'),
+         url('../../fonts/Vazir-Bold.ttf') format('truetype');
+         font-weight: bold;
+}
+
+@font-face {
+    font-family: 'yekan';
+    src: url('../../fonts/Yekan.eot');
+    src: url('../../fonts/Yekan.eot?#iefix') format('Yekan-opentype'),
+         url('../../fonts/Yekan.woff') format('woff'),
+         url('../../fonts/Yekan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'parastoo';
+    src: url('../../fonts/Parastoo-Bold.eot');
+    src: url('../../fonts/Parastoo-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Parastoo-Bold.woff') format('woff'),
+         url('../../fonts/Parastoo-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'parastoo1';
+    src: url('../../fonts/Parastoo.eot');
+    src: url('../../fonts/Parastoo.eot?#iefix') format('Parastoo-opentype'),
+         url('../../fonts/Parastoo.woff') format('woff'),
+         url('../../fonts/Parastoo.ttf') format('truetype');
+         font-weight: normal;
+         font-style: normal;
+}
+
+@font-face {
+    font-family: 'shabnam';
+    src: url('../../fonts/Shabnam-Bold.eot');
+    src: url('../../fonts/Shabnam-Bold.eot?#iefix') format('Shabnam-opentype'),
+         url('../../fonts/Shabnam-Bold.woff') format('woff'),
+         url('../../fonts/Shabnam-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'shabnam1';
+    src: url('../../fonts/Shabnam.eot');
+    src: url('../../fonts/Shabnam.eot?#iefix') format('Shabnam-opentype'),
+         url('../../fonts/Shabnam.woff') format('woff'),
+         url('../../fonts/Shabnam.ttf') format('truetype');
+         font-weight: normal;
+         font-style: normal;
+}
+
+@font-face {
+    font-family: 'sahel';
+    src: url('../../fonts/Sahel.eot');
+    src: url('../../fonts/Sahel.eot?#iefix') format('Sahel-opentype'),
+         url('../../fonts/Sahel.woff') format('woff'),
+         url('../../fonts/Sahel.ttf') format('truetype');
+         font-weight: normal;
+         font-style: normal;
+}
+
+@font-face {
+    font-family: 'samim';
+    src: url('../../fonts/Samim.eot');
+    src: url('../../fonts/Samim.eot?#iefix') format('Samim-opentype'),
+         url('../../fonts/Samim.woff') format('woff'),
+         url('../../fonts/Samim.ttf') format('truetype');
+         font-weight: normal;
+         font-style: normal;
+}
+
+@font-face {
+    font-family: 'samim1';
+    src: url('../../fonts/Samim-Bold.eot');
+    src: url('../../fonts/Samim-Bold.eot?#iefix') format('Samim-opentype'),
+         url('../../fonts/Samim-Bold.woff') format('woff'),
+         url('../../fonts/Samim-Bold.ttf') format('truetype');
+         font-weight: bold;
+}
+
+@font-face {
+    font-family: 'tanha';
+    src: url('../../fonts/Tanha.eot');
+    src: url('../../fonts/Tanha.eot?#iefix') format('Tanha-opentype'),
+         url('../../fonts/Tanha.woff') format('woff'),
+         url('../../fonts/Tanha.ttf') format('truetype');
+         font-weight: bold;
+}
+/* end fonts */
+.font-vazir {
+    font-family: 'vazir' !important;
+}
+.font-vazir1 {
+    font-family: 'vazir1' !important;
+}
+.font-vazir2 {
+    font-family: 'vazir2' !important;
+}
+.font-yekan {
+    font-family: 'yekan' !important;
+}
+.font-parastoo {
+    font-family: 'parastoo' !important;
+}
+.font-parastoo1 {
+    font-family: 'parastoo1' !important;
+}
+.font-shabnam {
+    font-family: 'shabnam' !important;
+}
+.font-shabnam1 {
+    font-family: 'shabnam1' !important;
+}
+.font-sahel {
+    font-family: 'sahel' !important;
+}
+.font-samim {
+    font-family: 'samim' !important;
+}
+.font-samim1 {
+    font-family: 'samim1' !important;
+}
+.font-tanha {
+    font-family: 'tanha' !important;
+}
 

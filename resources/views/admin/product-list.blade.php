@@ -4,7 +4,7 @@
 
 <form action="{{ route('product-search') }}" method="GET">
     <div class="main-header-center ms-3 d-none d-lg-block">
-        <input type="text" name="q" class="form-control" placeholder="...جستجو برای نتایج">
+        <input type="text" name="q" class="font-samim form-control" placeholder="...جستجو برای نتایج">
         <button class="btn px-0 pt-2"><i class="fe fe-search" aria-hidden="true"></i></button>
     </div>
 </form>
@@ -13,7 +13,7 @@
 
 @section('content')
 <!-- CONTAINER -->
-<div class="main-container container-fluid">
+<div class="font-samim main-container container-fluid">
 
     <!-- PAGE-HEADER -->
     <div class="page-header">
@@ -28,7 +28,7 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-md-6 col-sm-6"></div>
-                        <div class="col-md-6 col-sm-6 text-end"><a href="{{ route('product-create') }}" class="btn btn-success float-sm-end">محصول جدید<i class="fa fa-arrow-right ms-1"></i></a></div>
+                        <div class="col-md-6 col-sm-6 text-end"><a href="{{ route('product-create') }}" class="btn btn-success float-sm-end">محصول جدید<i class="fa fa-arrow-left ms-1"></i></a></div>
                     </div>
                 </div>
                 <div class="card-body">

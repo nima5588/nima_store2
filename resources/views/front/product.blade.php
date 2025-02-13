@@ -12,7 +12,7 @@
             <div class="row align-items-center">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <!--Breadcrumbs-->
-                    <div class="breadcrumbs"><a href="{{ route('home') }}" title="برگشت به صفحه اصلی">خانه</a><span class="main-title fw-bold"><i class="icon anm anm-angle-right-l"></i>جزعیات محصول</span></div>
+                    <div class="font-vazir breadcrumbs"><a href="{{ route('home') }}" title="برگشت به صفحه اصلی">خانه</a><span class="main-title fw-bold"><i class="icon anm anm-angle-right-l"></i>جزعیات محصول</span></div>
                     <!--End Breadcrumbs-->
                 </div>
             </div>
@@ -21,7 +21,7 @@
     <!--End Page Header-->
 
     <!--Main Content-->
-    <div class="container">     
+    <div class="container">
         <!--Product Content-->
         <div class="product-single">
             <div class="row">
@@ -42,20 +42,20 @@
                 <div class="mt-5 col-lg-6 col-md-6 col-sm-12 col-12 product-layout-info">
                     <!-- Product Details -->
                     <div class="product-single-meta">
-                        <h2 class="product-main-title">{{ $product->name }}</h2>
+                        <h2 class="font-parastoo product-main-title">{{ $product->name }}</h2>
                         <!-- Product Info -->
                         <p></p>
-                        <p> {{ $product->category()->name }} : دسته بندی</p>
+                        <p class="font-sahel"> {{ $product->category()->name }} : دسته بندی</p>
                         <p></p>
                         <!-- End Product Info -->
                         <!-- Product Price -->
                         <div class="product-price d-flex-center my-3">
-                            <span class="price">{{ $product->price }} (تومان)</span>
+                            <span class="font-parastoo price">{{ $product->price }} (تومان)</span>
                         </div>
                         <!-- End Product Price -->
                         <hr>
                         <!-- Sort Description -->
-                        <div class="sort-description">{!! $product->description !!} : توضیحات</div>
+                        <div class="font-sahel sort-description">توضیحات : {!! $product->description !!} </div>
                         <!-- End Sort Description -->
                     </div>
                     <!-- End Product Details -->
@@ -68,15 +68,15 @@
                             <!-- Product Add -->
                             <div class="product-form-submit addcart fl-1 ms-3">
                                 @if (Auth::user())
-                                <a class="btn btn-secondary product-form-cart-submit" href="{{ route('basket-add', ['product_id' => $product->id]) }}">اضافه کردن به سبد خرید</a>
+                                <a class="font-parastoo btn btn-secondary product-form-cart-submit" href="{{ route('basket-add', ['product_id' => $product->id]) }}">اضافه کردن به سبد خرید</a>
                                 @else
-                                <a class="btn btn-secondary product-form-cart-submit" href="{{ route('login') }}">اضافه کردن به سبد خرید</a>
+                                <a class="font-parastoo btn btn-secondary product-form-cart-submit" href="{{ route('login') }}">اضافه کردن به سبد خرید</a>
                                 @endif
                             </div>
                             <!-- Product Add -->
                             <!-- Product Buy -->
                             <div class="product-form-submit buyit fl-1 ms-3">
-                                <a href="{{ route('cart-basket') }}" class="btn btn-primary proceed-to-checkout"><span>نمایش سبد</span></a>
+                                <a href="{{ route('cart-basket') }}" class="font-parastoo btn btn-primary proceed-to-checkout"><span>نمایش سبد</span></a>
                             </div>
                             <!-- End Product Buy -->
                         </div>
